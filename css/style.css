@@ -1,3 +1,10 @@
+/* #region Root */
+:root {
+    --list-gap: 20px;
+}
+
+/* #endregion Root */
+
 /* #region Regole Reset */
 * {
     box-sizing: border-box;
@@ -14,7 +21,13 @@ button {
     padding: 0.5rem 1.25rem;
     border: none;
     border-radius: 20px;
-    background-color: cornflowerblue;
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+button.nascondi {
+    background-color: darkred;
+    color: #fff;
 }
 
 /* #endregion Regole Reset */
@@ -37,12 +50,24 @@ button {
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-bottom: 30px;
 }
 
 .spesa__list {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: var(--list-gap);
+}
+
+.list__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: calc(100% / 5 - var(--list-gap));
+    aspect-ratio: 1;
+    font-size: 1.5rem;
+    background-color: cornflowerblue;
+    border-radius: 20px;
 }
 
 /* #endregion Spesa */
