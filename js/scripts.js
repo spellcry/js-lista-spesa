@@ -31,7 +31,15 @@ forEl.addEventListener('click', function() {
 });
 
 whileEl.addEventListener('click', function() {
-
+    spesaListEl.innerHTML = '';
+    let i = 0;
+    while ( i < listaSpesa.length ) {
+        const listItemEl = document.createElement('li');
+        listItemEl.className = 'list__item';
+        listItemEl.append(listaSpesa[i]);
+        spesaListEl.append(listItemEl);
+        i++;
+    }
 });
 
 nascondiEl.addEventListener('click', function() {
