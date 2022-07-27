@@ -48,15 +48,10 @@ spesaListEl.addEventListener('click', function() {
     let listHoverEl = spesaListEl.querySelector(':hover');
     if ( listHoverEl != null ) {
         if ( confirm('Vuoi eliminare il prodotto?') ) {            
-            let i = 0;
-            while ( listHoverEl != null ) {
-                listHoverEl = listHoverEl.previousSibling;
-                if ( i === 0 ) {
-                    listHoverEl.nextSibling.remove();
-                }
-                i++;
-            }
-            listaSpesa.splice(i, 1);
+            let prodotto = listHoverEl.innerHTML;
+            prodotto = listaSpesa.indexOf(prodotto);
+            listHoverEl.remove();
+            listaSpesa.splice(prodotto, 1);
         }
     }
 });
