@@ -17,8 +17,6 @@ for ( let i = 0; i < numeroProdotti; i++ ) {
     listaSpesa.push(prodotto);
 }
 
-console.log(listaSpesa);
-
 forEl.addEventListener('click', function() {
     spesaListEl.innerHTML = '';
     for (let i = 0; i < listaSpesa.length; i++ ) {
