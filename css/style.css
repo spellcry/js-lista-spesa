@@ -1,0 +1,29 @@
+/* #region Regole Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* #endregion Regole Reset */
+
+/* #region Regole Layout */
+.container {
+    max-width: 1024px;
+    margin-inline: auto;
+}
+
+/* #endregion Regole Layout */
+
+/* #region Spesa */
+.spesa__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* #endregion Spesa */
